@@ -1,3 +1,4 @@
 #!/bin/bash
 
-echo $( wc -l $1 )
+ans=$( wc -l $1 )
+echo $ans
