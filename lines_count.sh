@@ -1,9 +1,14 @@
 #!/bin/bash
 
-if [ -f $1 ]
+if [ -z $1 ]
 then
-	ans=$(wc -l $1)
-	echo $ans
+	echo "Empty string"
 else
-	echo "Input is invalid"
+	if [ -f $1 ]
+	then
+		ans=$(wc -l $1)
+		echo $ans
+	else
+		echo "Input is invalid"
+	fi
 fi
