@@ -36,3 +36,13 @@ else
         echo "fail"
 fi
 
+
+val=$(source ../file_or_directory.sh )
+
+if [ "$val" == "Empty string" ]
+then
+        echo "success"
+else
+        echo "fail"
+fi
+
