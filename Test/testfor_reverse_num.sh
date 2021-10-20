@@ -72,3 +72,29 @@ else
         echo "fail"
 fi
 
+source ../revers_num.sh -784
+retval=$(source ../revers_num.sh -784)
+if [ "$retval" == "Invalid input" ]
+then
+        echo "success"
+else
+        echo "fail"
+fi
+
+source ../revers_num.sh
+retval=$(source ../revers_num.sh )
+if [ "$retval" == "Empty input" ]
+then
+        echo "success"
+else
+        echo "fail"
+fi
+
+source ../revers_num.sh abcd
+retval=$(source ../revers_num.sh abcd)
+if [ "$retval" == "Invalid input" ]
+then
+        echo "success"
+else
+        echo "fail"
+fi
