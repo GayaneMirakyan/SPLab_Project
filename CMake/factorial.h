@@ -1,3 +1,3 @@
 #include <iostream>
 
-int Factorial(int);
+unsigned int Factorial(unsigned int);
