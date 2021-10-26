@@ -6,9 +6,9 @@
 	ReverseNum.sh      - get a number and print this number in reverse order
 
 ## 2. CMake
-This CMake file build and link two C++ files, build.sh is an executable file, You can run it and it will build this Cmake file
+This CMake folder build and link two C++ files, build.sh is an executable file, You can run it and it will build this Cmake file
 
-## 3. Test - this file contains tests for scripts
+## 3. Test - this folder contains tests for scripts
 	TestForFileOrDir.sh  - test for FileOrDirectory.sh
 	TestForLinesCount.sh - test for LinesCount.sh
 	TestForReverseNum.sh - test for ReverseNum.sh
