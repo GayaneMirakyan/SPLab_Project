@@ -1,42 +1,42 @@
 #!/bin/bash
 
-source ../lines_count.sh ../file_or_directory.sh
+source ../LinesCount.sh ../FileOrDirectory.sh
 
-if [ "$ans" == "16 ../file_or_directory.sh" ]
+if [ "$ans" == "16 ../FileOrDirectory.sh" ]
 then
 	echo "success"
 else
 	echo "fail"
 fi
 
-source ../lines_count.sh ../all_file_names.sh
+source ../LinesCount.sh ../AllFileNames.sh
 
-if [ "$ans" == "4 ../all_file_names.sh" ]
+if [ "$ans" == "4 ../AllFileNames.sh" ]
 then
         echo "success"
 else
         echo "fail"
 fi
 
-source ../lines_count.sh ../lines_count.sh
+source ../LinesCount.sh ../LinesCount.sh
 
-if [ "$ans" == "16 ../lines_count.sh" ]
+if [ "$ans" == "16 ../LinesCount.sh" ]
 then
         echo "success"
 else
         echo "fail"
 fi
 
-source ../lines_count.sh ../revers_num.sh
+source ../LinesCount.sh ../ReverseNum.sh
 
-if [ "$ans" == "30 ../revers_num.sh" ]
+if [ "$ans" == "30 ../ReverseNum.sh" ]
 then
         echo "success"
 else
         echo "fail"
 fi
 
-source ../lines_count.sh ../kjhghjk
+source ../LinesCount.sh ../kjhghjk
 
 if [ "$ans" == "Input is invalid" ]
 then
@@ -45,7 +45,7 @@ else
         echo "fail"
 fi
 
-source ../lines_count.sh
+source ../LinesCount.sh
 
 if [ "$ans" == "Empty string" ]
 then

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../revers_num.sh 0 
+source ../ReverseNum.sh 0 
 
 if [ "$revNum" == 0 ]
 then 
@@ -9,7 +9,7 @@ else
 	echo "fail"
 fi
 
-source ../revers_num.sh 12
+source ../ReverseNum.sh 12
 
 if [ "$revNum" == 21 ]
 then
@@ -18,7 +18,7 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh 789
+source ../ReverseNum.sh 789
 
 if [ "$revNum" == 987 ]
 then
@@ -27,7 +27,7 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh 1200
+source ../ReverseNum.sh 1200
 
 if [ "$revNum" == 21 ]
 then
@@ -36,7 +36,7 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh 55
+source ../ReverseNum.sh 55
 
 if [ "$revNum" == 55 ]
 then
@@ -45,7 +45,7 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh 1001
+source ../ReverseNum.sh 1001
 
 if [ "$revNum" == 1001 ]
 then
@@ -54,7 +54,7 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh 1012
+source ../ReverseNum.sh 1012
 
 if [ "$revNum" == 2101 ]
 then
@@ -63,7 +63,7 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh 500000
+source ../ReverseNum.sh 500000
 
 if [ "$revNum" == 5 ]
 then
@@ -72,8 +72,8 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh -784
-retval=$(source ../revers_num.sh -784)
+source ../ReverseNum.sh -784
+retval=$(source ../ReverseNum.sh -784)
 if [ "$retval" == "Invalid input" ]
 then
         echo "success"
@@ -81,8 +81,8 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh
-retval=$(source ../revers_num.sh )
+source ../ReverseNum.sh
+retval=$(source ../ReverseNum.sh )
 if [ "$retval" == "Empty input" ]
 then
         echo "success"
@@ -90,8 +90,8 @@ else
         echo "fail"
 fi
 
-source ../revers_num.sh abcd
-retval=$(source ../revers_num.sh abcd)
+source ../ReverseNum.sh abcd
+retval=$(source ../ReverseNum.sh abcd)
 if [ "$retval" == "Invalid input" ]
 then
         echo "success"

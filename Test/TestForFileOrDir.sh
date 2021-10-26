@@ -1,6 +1,6 @@
 #!/bin/bash
 
-val=$(source ../file_or_directory.sh ../Test)
+val=$(source ../FileOrDirectory.sh ../Test)
 
 if [ "$val" == "This file is directory" ]
 then
@@ -9,7 +9,7 @@ else
 	echo "fail"
 fi
 
-val=$(source ../file_or_directory.sh ../lines_count.sh)
+val=$(source ../FileOrDirectory.sh ../LinesCount.sh)
 
 if [ "$val" == "This is a regular file" ]
 then
@@ -18,7 +18,7 @@ else
         echo "fail"
 fi
 
-val=$(source ../file_or_directory.sh ../all_file_names.sh)
+val=$(source ../FileOrDirectory.sh ../AllFileNames.sh)
 
 if [ "$val" == "This is a regular file" ]
 then
@@ -27,7 +27,7 @@ else
         echo "fail"
 fi
 
-val=$(source ../file_or_directory.sh ../CMake)
+val=$(source ../FileOrDirectory.sh ../CMake)
 
 if [ "$val" == "This file is directory" ]
 then
@@ -37,7 +37,7 @@ else
 fi
 
 
-val=$(source ../file_or_directory.sh )
+val=$(source ../FileOrDirectory.sh )
 
 if [ "$val" == "Empty string" ]
 then
