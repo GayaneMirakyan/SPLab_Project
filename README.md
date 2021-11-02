@@ -9,6 +9,7 @@
 This CMake folder build and link two C++ files, build.sh is an executable file, You can run it and it will build this Cmake file.
 
 ## 3. Test - this folder contains tests for scripts.
+	TestForAllFileName.sh is for testing AllFileName.sh script.
 	TestForFileOrDir.sh is for testing FileOrDirectory.sh script.
 	TestForLinesCount.sh is for testing LinesCount.sh script.
 	TestForReverseNum.sh is for testing ReverseNum.sh script.
