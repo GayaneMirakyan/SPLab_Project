@@ -15,4 +15,4 @@ This CMake folder build and link two C++ files, build.sh is an executable file, 
 	TestForReverseNum.sh is for testing ReverseNum.sh script.
 
 ## 4. Docker
-	Dockerfile for building a Docker image, which will run ReverseNum.sh script for reversing 7894.
+	Dockerfile for building a Docker image, which will run all my scripts.
