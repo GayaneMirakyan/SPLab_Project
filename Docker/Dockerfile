@@ -4,10 +4,10 @@ RUN apt-get update
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY AllFileNames.sh /usr/src/app
-COPY ReverseNum.sh /usr/src/app/
-COPY FileOrDirectory.sh /usr/src/app/
-COPY LinesCount.sh /usr/src/app/
+ADD ./AllFileNames.sh /usr/src/app/
+ADD ./ReverseNum.sh /usr/src/app/
+ADD ./FileOrDirectory.sh /usr/src/app/
+ADD ./LinesCount.sh /usr/src/app/
 
 RUN echo "ReverseNum.sh script" >> temp
 RUN ./ReverseNum.sh 8645 >> temp
