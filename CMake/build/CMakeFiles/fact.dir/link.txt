@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/fact.dir/main.cpp.o CMakeFiles/fact.dir/factorial.cpp.o  -o fact 
