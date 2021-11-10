@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ..
-val=$(source ./AllFileNames.sh)
+val=$(source ./AllFileNames.sh "   ")
 if [ "$val" == "Empty string is not a directory or a regular file" ]
 then
 	echo "success"
@@ -11,6 +11,7 @@ fi
 
 val=$(source ./AllFileNames.sh Test)
 output="Test
+Test/run_all_tests.sh
 Test/TestForAllFileName.sh
 Test/TestForFileOrDir.sh
 Test/TestForLinesCount.sh
@@ -19,5 +20,5 @@ if [ "$val" == "$output" ]
 then
 	echo "success"
 else
-	echo "$val"
+	echo "fail"
 fi

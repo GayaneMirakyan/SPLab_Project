@@ -14,4 +14,3 @@ echo
 
 echo "Run TestForReverseNum.sh"
 ./TestForReverseNum.sh
-echo

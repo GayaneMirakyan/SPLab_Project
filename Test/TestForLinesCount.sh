@@ -1,53 +1,53 @@
 #!/bin/bash
 
-source ../LinesCount.sh ../FileOrDirectory.sh
+val=$(source ../LinesCount.sh ../FileOrDirectory.sh)
 
-if [ "$ans" == "16 ../FileOrDirectory.sh" ]
+if [ "$val" == "16 ../FileOrDirectory.sh" ]
 then
 	echo "success"
 else
 	echo "fail"
 fi
 
-source ../LinesCount.sh ../AllFileNames.sh
+val=$(source ../LinesCount.sh ../AllFileNames.sh)
 
-if [ "$ans" == "4 ../AllFileNames.sh" ]
+if [ "$val" == "31 ../AllFileNames.sh" ]
 then
         echo "success"
 else
         echo "fail"
 fi
 
-source ../LinesCount.sh ../LinesCount.sh
+val=$(source ../LinesCount.sh ../LinesCount.sh)
 
-if [ "$ans" == "16 ../LinesCount.sh" ]
+if [ "$val" == "16 ../LinesCount.sh" ]
 then
         echo "success"
 else
         echo "fail"
 fi
 
-source ../LinesCount.sh ../ReverseNum.sh
+val=$(source ../LinesCount.sh ../ReverseNum.sh)
 
-if [ "$ans" == "30 ../ReverseNum.sh" ]
+if [ "$val" == "30 ../ReverseNum.sh" ]
 then
         echo "success"
 else
         echo "fail"
 fi
 
-source ../LinesCount.sh ../kjhghjk
+val=$(source ../LinesCount.sh ../kjhghjk)
 
-if [ "$ans" == "Input is invalid" ]
+if [ "$val" == "Input is invalid" ]
 then
         echo "success"
 else
         echo "fail"
 fi
 
-source ../LinesCount.sh
+val=$(source ../LinesCount.sh)
 
-if [ "$ans" == "Empty string" ]
+if [ "$val" == "Empty string" ]
 then
         echo "success"
 else
