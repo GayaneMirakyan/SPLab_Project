@@ -4,7 +4,7 @@
 #include <climits>
 #include <utility>
 
-std::vector<std::pair<int, int>> graph[10005];
+std::vector<std::pair<int, int> > graph[10005];
 int start, finish, pointers[50000005], value[50000005], dist[10005];
 std::vector<int> ways_end;
 
@@ -44,8 +44,8 @@ int main() {
 		graph[v].push_back(std::make_pair(u, w));
 	}
 
-	bool visited[10005]{};
-	std::priority_queue<std::pair<int, int>> q;
+	bool visited[10005] = {false};
+	std::priority_queue<std::pair<int, int> > q;
 	q.push(std::make_pair(0, finish));
 	int best_value = INT_MAX, count = 0;
 	
