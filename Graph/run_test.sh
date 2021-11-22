@@ -1,7 +1,6 @@
 #!/bin/bash
 
-g++ GraphShortestPath.cpp -o main
-g++ test1.cpp -o test1
+./build.sh
 
 ./test1 | ./main > output1.txt
 
@@ -12,7 +11,6 @@ else
         echo "fail test 1"
 fi
 
-g++ test2.cpp -o test2
 
 ./test2 | ./main > output1.txt
 
@@ -23,8 +21,5 @@ else
         echo "fail test 2"
 fi
 
-rm main
-rm test1
-rm test2
 rm output1.txt
-
+./clean.sh
