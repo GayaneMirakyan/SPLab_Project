@@ -18,6 +18,7 @@ This CMake folder build and link two C++ files, build.sh is an executable file, 
 	Dockerfile for building a Docker image, which will run all my scripts.
 
 ## 5. Graph
-	GraphShortestPath.cpp is for getting the shortest path in a graph, you can build and run it using ./build.sh
-	You must give input count of vertexes and ribs, start and end, after it each vertex with a weight
+	GraphShortestPath.cpp is for getting the shortest path in a graph, you can build and run it using ./run_cpp.sh
+	You must give input count of vertexes and edges, start and end, after it each vertex with a weight
 	I write two tests, which you can run using ./run_test.sh
+	build.sh script is for building all cpp files, and clean.sh is for cleaning after building.
