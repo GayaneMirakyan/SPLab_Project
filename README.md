@@ -22,3 +22,6 @@ This CMake folder build and link two C++ files, build.sh is an executable file, 
 	You must give input count of vertexes and edges, start and end, after it each vertex with a weight
 	I write two tests, which you can run using ./run_test.sh
 	build.sh script is for building all cpp files, and clean.sh is for cleaning after building.
+	randomNum.cpp is for generating random numbers.
+	TestForTest1.cpp is a test in which start and end are random numbers.
+	buildForTest1.sh is for building and running first test with random numbers, You can run it using ./buildForTest1.sh
