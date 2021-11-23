@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main() {
-	int n = 10000, m = 10000, start = 2, finish = 9999;
+	int n = 10000, m = 10000, start, finish;
+	std::cin >> start >> finish;
 
 	std::cout << n << " " << " " << m << " " << start << " " << finish << std::endl;
 	int i;
