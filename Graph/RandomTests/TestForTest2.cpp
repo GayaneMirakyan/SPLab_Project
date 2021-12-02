@@ -22,33 +22,15 @@ void print_roads(int** matrix, std::string road, int ind_x, int ind_y, int finis
     {
         print_roads(matrix, road + " " + std::to_string(matrix[ind_x + u][ind_y]), ind_x + u, ind_y, finish, finish_x, finish_y, u, v);
     }
-    else if (ind_x < finish_x)
-    {
-        print_roads(matrix, road + " " + std::to_string(matrix[ind_x + u][ind_y]), ind_x + u, ind_y, finish, finish_x, finish_y, u, v);
-    }
-    else if (ind_x > finish_x)
-    {
-        print_roads(matrix, road + " " + std::to_string(matrix[ind_x + u][ind_y]), ind_x + u, ind_y, finish, finish_x, finish_y, u, v);
-    }
-
 
     if (ind_y < finish_y)
     {
         print_roads(matrix, road + " " + std::to_string(matrix[ind_x][ind_y + v]), ind_x, ind_y + v, finish, finish_x, finish_y, u, v);
     }
-    else if (ind_y < finish_y)
-    {
-        print_roads(matrix, road + " " + std::to_string(matrix[ind_x][ind_y + v]), ind_x, ind_y + v, finish, finish_x, finish_y, u, v);
-    }
     else if (ind_y > finish_y)
     {
         print_roads(matrix, road + " " + std::to_string(matrix[ind_x][ind_y + v]), ind_x, ind_y + v, finish, finish_x, finish_y, u, v);
     }
-    else if (ind_y > finish_y)
-    {
-        print_roads(matrix, road + " " + std::to_string(matrix[ind_x][ind_y + v]), ind_x, ind_y + v, finish, finish_x, finish_y, u, v);
-    }
-
 }
 
 
