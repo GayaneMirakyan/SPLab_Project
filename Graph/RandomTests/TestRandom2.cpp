@@ -2,10 +2,10 @@
 
 int main()
 {
-    int n = 10000, m = 19897, start, finish;
+    int n = 10000, m = 19897, start, end;
     std::cin >> start >> end;
 
-    std::cout << n << " " << m << " " << start << " " << finish << std::endl;
+    std::cout << n << " " << m << " " << start << " " << end << std::endl;
     int k = 99, s = 0;
     while(k){
         int i = s+1;
