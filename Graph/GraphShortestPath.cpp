@@ -96,6 +96,13 @@ int main() {
         graph[vertex1].push_back(std::make_pair(vertex2, weight12));
         graph[vertex2].push_back(std::make_pair(vertex1, weight12));
     }
+    if(start == end)
+    {
+        std::cout << "The shortest path length: 0" << std::endl;
+	std::cout << "Path count: 1" << std::endl;
+        std::cout << start << " " << std::endl;
+	return 0;
+    }
 
     int best_value = find_shortest_length(vertex);
     dist[start] = best_value;
