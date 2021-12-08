@@ -1,16 +1,19 @@
 #include <iostream>
 #include <ctime>
+#include <cstdlib>
+#include <stdlib.h>
 
 int main()
-{
-    time_t x = time(nullptr);
-    time_t temp = time(nullptr);
-    int i = -1;
+{ 
+    srand(time(0));
+    int j = -1;
+    int temp = rand()%10000;
     for(int count = 0; count <= temp % 2; count++ )
     {
-        i*=-1;
+        j*=-1;
     }
-    time_t y = x + i * temp % 400;
-
-    std::cout << x % 10000 << " " << y % 10000 << std::endl;
+    int x = rand() % 10000;
+    int y = x + j * temp % 400;
+    std::cout << x  << " " << y % 10000 << std::endl;
+    return 0;
 }
