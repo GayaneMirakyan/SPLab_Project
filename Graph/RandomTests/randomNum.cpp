@@ -7,7 +7,7 @@ int main()
 {   
     int x = 10000, y = 1;
     srand(time(NULL));
-    while(x - y >= 400 || y - x >= 400)
+    while((x - y >= 400 || y - x >= 400) && x <= 10000 && y <= 10000)
     {
         int j = -1;
         int temp = rand()%400;
@@ -16,6 +16,11 @@ int main()
             j*=-1;
         }
         x = rand();
+    
+        while(temp % 400 >= x % 10000)
+	{
+            x = rand();
+	}
 
         y = x % 10000 + j * temp % 400;
         x = x % 10000 + 1;

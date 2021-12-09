@@ -3,10 +3,11 @@
 #include <queue>
 #include <climits>
 #include <utility>
+#include <string>
 
 std::vector<std::pair<int, int> > graph[10005];
-int start, end, pointers[50000005], value[50000005], dist[10005];
-std::vector<int> ways_end;
+int start, end, dist[10005];
+std::vector<std::string> ways;
 
 int find_shortest_length(int vertex) 
 {
@@ -56,15 +57,16 @@ int find_shortest_length(int vertex)
     return best_value;
 }
 
-int create_pointers(int parent, int current, int current_id) 
+void create_pointers(std::string str, int parent, int current) 
 {
-    value[current_id] = current;
+    str += std::to_string(current);
+    str += " ";
     if (current == end) 
     {
-        ways_end.push_back(current_id);
-        return current_id;
+	ways.push_back(str);
+	std::cout << str << std::endl;
+        return;
     }
-    int idx = current_id;
     for (int i = 0; i < graph[current].size(); ++i) 
     {
         int child = graph[current][i].first;
@@ -75,11 +77,9 @@ int create_pointers(int parent, int current, int current_id)
         }
         if (weight + dist[child] == dist[current]) 
 	{
-            pointers[idx+1] = current_id;
-            idx = create_pointers(current, child, idx+1);
+            create_pointers(str, current, child);
 	}
     }
-    return idx;
 }
 
 
@@ -108,26 +108,9 @@ int main() {
     dist[start] = best_value;
     std::cout << "The shortest path length: ";
     std::cout << best_value << std::endl;
-    create_pointers(-1, start, 1);
-    std::cout << "Path count: ";
-    std::cout << ways_end.size() << std::endl;
+    create_pointers("", -1, start);
+    std::cout << "Path count: " << ways.size();
 	
-    for (int i = 0; i < ways_end.size(); ++i) 
-    {
-        std::vector<int> way;
-        int current_id = ways_end[i];
-        while (pointers[current_id] != 0) 
-	{
-            way.push_back(value[current_id]);
-	    current_id = pointers[current_id];
-	}
-	way.push_back(start);
-	for (int j = way.size() - 1; j >= 0; --j) 
-	{
-            std::cout << way[j] << " ";
-	}
-	std::cout << std::endl;
-    }
     return 0;
 }
 
