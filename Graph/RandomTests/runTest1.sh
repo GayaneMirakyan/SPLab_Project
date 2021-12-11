@@ -1,8 +1,8 @@
 #!/bin/bash
 ./buildForTest1.sh
 
-count=100
-while [ $count -gt -1 ]
+count=1
+while [ $count -lt 101 ]
 do
 	./randomNum > num
 	cat num | ./TestForTest1 > finalTestForTest1
@@ -13,13 +13,14 @@ do
 	diff -s temp finaltesttemp > answer
         if [ "$echo $(cat answer)" == "$echo Files temp and finaltesttemp are identical" ]
 	then
-		echo "test 1 success"
+		echo $count" iteration for test 1 success"
 	else
 		echo "fail test 1"
 	fi
 	echo "for numbers"
 	echo $(cat num)
-	let count=$count-1
+	echo
+	let count=$count+1
 
 	rm num
         rm finalTestForTest1

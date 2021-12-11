@@ -1,7 +1,7 @@
 #!/bin/bash
 ./buildForTest2.sh
 
-for i in {1..101..1}
+for i in {1..100..1}
 do
 	./randomNum > num
 	cat num | ./TestForTest2 > finalTestForTest2
@@ -12,12 +12,13 @@ do
         diff -s temp finaltesttemp > answer
         if [ "$echo $(cat answer)" == "$echo Files temp and finaltesttemp are identical" ]
 	then
-		echo "test 2 success"
+		echo $i" iteration for test 2 success"
 	else
 		echo "fail test 2"
 	fi
 	echo "for numbers"
 	echo $(cat num)
+	echo
 
         rm num
 	rm finalTestForTest2
