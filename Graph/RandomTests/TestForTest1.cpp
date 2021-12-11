@@ -5,6 +5,14 @@ int main()
     int n = 10000, m = 10000;
     int start, end, count;
     std::cin >> start >> end;
+
+    if(start == end)
+    {
+        std::cout << "The shortest path length: 0" << std::endl;
+	std::cout << "Path count: 1" << std::endl;
+	std::cout << start << " " << std::endl;
+    }
+
     if(start - end == 5000 || end - start == 5000)
     {
         std::cout << "The shortest path length: 5000" << std::endl;

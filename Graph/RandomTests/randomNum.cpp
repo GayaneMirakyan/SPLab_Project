@@ -1,25 +1,29 @@
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
-#include <stdlib.h>
+#include <random>
+
 
 int main()
 {   
+    
+	
+    std::random_device rd;
+    std::mt19937 mt(rd());
+    std::uniform_real_distribution<double> dist(1, 10000);
+
     int x = 10000, y = 1;
-    srand(time(NULL));
     while((x - y >= 400 || y - x >= 400) && x <= 10000 && y <= 10000)
     {
         int j = -1;
-        int temp = rand()%400;
+        int temp = int(dist(mt));
         for(int count = 0; count <= temp % 2; count++ )
         {
             j*=-1;
         }
-        x = rand();
+        x = int(dist(mt));
     
         while(temp % 400 >= x % 10000)
 	{
-            x = rand();
+            x = int(dist(mt));
 	}
 
         y = x % 10000 + j * temp % 400;
