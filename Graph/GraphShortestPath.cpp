@@ -57,7 +57,7 @@ int find_shortest_length(int vertex)
     return best_value;
 }
 
-void create_pointers(std::string str, int parent, int current) 
+void create_paths(std::string str, int parent, int current) 
 {
     str += std::to_string(current);
     str += " ";
@@ -77,7 +77,7 @@ void create_pointers(std::string str, int parent, int current)
         }
         if (weight + dist[child] == dist[current]) 
 	{
-            create_pointers(str, current, child);
+            create_paths(str, current, child);
 	}
     }
 }
@@ -108,7 +108,7 @@ int main() {
     dist[start] = best_value;
     std::cout << "The shortest path length: ";
     std::cout << best_value << std::endl;
-    create_pointers("", -1, start);
+    create_paths("", -1, start);
     std::cout << "Path count: " << ways.size();
 	
     return 0;
