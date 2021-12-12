@@ -1,5 +1,5 @@
 #!/bin/bash
-./buildForTest2.sh
+./buildMatrix.sh
 
 for i in {1..100..1}
 do
@@ -28,4 +28,4 @@ do
 	rm finaltesttemp
 	rm answer
 done
-./cleanTest2.sh
+./cleanMatrix.sh

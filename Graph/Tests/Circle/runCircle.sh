@@ -1,5 +1,5 @@
 #!/bin/bash
-./buildForTest1.sh
+./buildCircle.sh
 
 count=1
 while [ $count -lt 101 ]
@@ -32,4 +32,4 @@ do
 
 done
 
-./cleanTest1.sh
+./cleanCircle.sh
