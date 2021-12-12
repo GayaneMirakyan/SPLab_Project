@@ -1,7 +1,6 @@
 #!/bin/bash
 
-g++ ../GraphShortestPath.cpp -o main
+./build_Graph.sh
 ./main
-
-rm main
+./clean_Graph.sh
 
