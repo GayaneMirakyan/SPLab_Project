@@ -1,14 +1,20 @@
 #!/bin/bash
 
 cd ..
-cp AllFileNames.sh Docker/
-cp FileOrDirectory.sh Docker/
-cp LinesCount.sh Docker/
-cp ReverseNum.sh Docker/
+cd Scripts/
+cp AllFileNames.sh ../
+cp FileOrDirectory.sh ../
+cp LinesCount.sh ../
+cp ReverseNum.sh ../
+cd ..
+mv AllFileNames.sh Docker/
+mv FileOrDirectory.sh Docker/
+mv LinesCount.sh Docker/
+mv ReverseNum.sh Docker/
 
 cd Docker
-docker build -t my-image . > /dev/null
-docker run -i -t my-image:latest
+sudo docker build -t my-image . > /dev/null
+sudo docker run -i -t my-image:latest
 
 rm AllFileNames.sh
 rm FileOrDirectory.sh
