@@ -26,7 +26,7 @@
 		* buildCircle.sh is for building randomNum.cpp and all cpp files in Circle folder
 		* cleanCircle.sh is for cleaning after building
 		* TestForCircle.cpp is a test for circle
-        * CircleInput.cpp generate a random input for TestForCircle.cpp
+        	* CircleInput.cpp generate a random input for TestForCircle.cpp
 			1->2->3->4->..........->9998->9999->10000->1
 
 	Matrix
